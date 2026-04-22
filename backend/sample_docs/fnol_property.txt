@@ -1,0 +1,22 @@
+FIRST NOTICE OF LOSS
+
+Policy Number: POL-2024-005
+Policyholder Name: Kiran Patel
+Effective Dates: 01-01-2024 to 31-12-2024
+
+Incident Date: 16-04-2026
+Incident Time: 06:00 AM
+Location: Satellite Road, Ahmedabad
+Description: Heavy rainfall caused flooding in the ground floor of the commercial property. Electrical equipment and furniture severely damaged.
+
+Claimant: Kiran Patel
+Third Parties: None
+Contact Details: kiran.patel@email.com | +91-9712345678
+
+Asset Type: Commercial Property
+Asset ID: PROP-AHM-00456
+Estimated Damage: 75000
+Initial Estimate: 75000
+
+Claim Type: property
+Attachments: flood_photos.zip, damage_assessment.pdf, municipal_report.pdf

@@ -1,0 +1,22 @@
+FIRST NOTICE OF LOSS
+
+Policy Number: POL-2024-001
+Policyholder Name: Ravi Kumar
+Effective Dates: 01-01-2024 to 31-12-2024
+
+Incident Date: 10-04-2026
+Incident Time: 09:30 AM
+Location: MG Road, Bengaluru
+Description: Minor rear-end collision at a traffic signal. No injuries. Vehicle has a dented bumper.
+
+Claimant: Ravi Kumar
+Third Parties: Suresh Nair
+Contact Details: ravi.kumar@email.com | +91-9876543210
+
+Asset Type: Car
+Asset ID: KA-01-AB-1234
+Estimated Damage: 18000
+Initial Estimate: 18000
+
+Claim Type: auto
+Attachments: photo_bumper.jpg, repair_quote.pdf
