@@ -145,7 +145,7 @@ def analyze(file_bytes: bytes, content_type: str) -> dict:
     route, reasoning = route_claim(fields, missing)
 
     return {
-        "extractedFields": fields.model_dump(exclude_none=True),
+"extractedFields": fields.model_dump(),
         "missingFields": missing,
         "recommendedRoute": route,
         "reasoning": reasoning
