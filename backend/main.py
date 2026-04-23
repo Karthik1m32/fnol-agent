@@ -1,10 +1,10 @@
 import os
-from fastapi import FastAPI, UploadFile, File, HTTPException
+from fastapi import FastAPI, UploadFile, File, HTTPException, Depends
 from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy.ext.asyncio import create_async_engine, AsyncSession
 from sqlalchemy.orm import sessionmaker, DeclarativeBase
-from sqlalchemy import Column, Integer, String, Text, DateTime
+from sqlalchemy import Column, Integer, String, Text, DateTime, text
 from datetime import datetime
 import json
 from dotenv import load_dotenv
@@ -107,7 +107,12 @@ async def upload_claim(file: UploadFile = File(...)):
 
     return JSONResponse(content=result)
 
-
+@app.delete("/claims/clear")
+async def clear_history():
+    async with AsyncSession(engine) as db:
+        await db.execute(text("DELETE FROM claims"))
+        await db.commit()
+    return {"message": "All claims cleared"}
 @app.get("/claims/history")
 async def get_history():
     try:
