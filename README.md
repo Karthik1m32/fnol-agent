@@ -20,11 +20,40 @@ An AI agent that reads FNOL (First Notice of Loss) insurance documents and:
 | Estimated damage < ₹25,000 | ⚡ Fast-track |
 | Complete claim, damage ≥ ₹25,000 | 📁 Standard Review |
 
+## Features
+
+### Dashboard
+- Drag & drop FNOL document upload (.txt or .pdf)
+- AI extracts all mandatory fields instantly
+- Colour-coded route decision with confidence score
+- Completeness progress bar
+- Routing reasoning explanation
+- Raw JSON response viewer with copy button
+- Download extracted data as Excel
+
+### Analytics
+- Total claims processed
+- Average and total damage exposure
+- Fraud flag count
+- Claims by route (pie chart)
+- Claims by type (bar chart)
+- Average claim value by route (bar chart)
+- Most frequently missing fields (progress bars)
+- Clear all data button
+
+### History
+- Full audit log of all processed claims
+- Click any claim to expand full details
+- Download individual claim as Excel
+- Download all claims as Excel report
+
 ## Tech Stack
 
 **Backend:** Python, FastAPI, Groq (LLaMA 3.3 70B), pdfplumber, SQLAlchemy, SQLite
 
-**Frontend:** React, Vite, Tailwind CSS, Axios
+**Frontend:** React, Vite, Tailwind CSS, Recharts, SheetJS (xlsx)
+
+**Theme:** Synapx brand colours (Purple #5B2D8E + Teal #00B4AE)
 
 ## Project Structure
 
@@ -39,6 +68,7 @@ fnol_agent/
 ├── frontend/
 │   └── src/
 │       └── App.jsx      # React UI
+├── start.bat            # One-click launcher
 └── README.md
 ```
 
@@ -76,12 +106,15 @@ Create a `.env` file inside `frontend/`:
 VITE_API_URL=http://localhost:8000
 ```
 
-Then start the dev server:
+Then start:
 ```bash
 npm run dev
 ```
 
 - UI runs at: http://localhost:5173
+
+### One-Click Launch
+Double-click `start.bat` to start both servers and open browser tabs automatically.
 
 ## API Endpoints
 
@@ -89,6 +122,7 @@ npm run dev
 |---|---|---|
 | POST | `/claims/upload` | Upload FNOL document (.txt or .pdf) |
 | GET | `/claims/history` | View all processed claims |
+| DELETE | `/claims/clear` | Clear all claims data |
 | GET | `/health` | Health check |
 | GET | `/docs` | Swagger UI |
 
